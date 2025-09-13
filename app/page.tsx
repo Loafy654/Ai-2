@@ -102,8 +102,8 @@ export default function ChatApp() {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-4">
       <div className="max-w-4xl mx-auto">
         <div className="mb-6 text-center">
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">OpenRouter Chat</h1>
-          <p className="text-gray-600">Chat with DeepSeek R1 using your OpenRouter API key</p>
+          <h1 className="text-3xl font-bold text-gray-900 mb-2">Ai Doctor Chat</h1>
+          <p className="text-gray-600">Chat with AI Doctor using your Private API key</p>
         </div>
 
         {showSettings && (
@@ -120,7 +120,7 @@ export default function ChatApp() {
             <CardContent>
               <div className="space-y-4">
                 <div>
-                  <Label htmlFor="apiKey">OpenRouter API Key</Label>
+                  <Label htmlFor="apiKey">Private API Key</Label>
                   <div className="relative mt-1">
                     <Input
                       id="apiKey"
@@ -141,14 +141,14 @@ export default function ChatApp() {
                     </Button>
                   </div>
                   <p className="text-sm text-gray-500 mt-1">
-                    Get your API key from{" "}
+                    Private API key from{" "}
                     <a
-                      href="https://openrouter.ai"
+                      href="https://www.facebook.com/Clarkukumi"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-blue-600 hover:underline"
                     >
-                      openrouter.ai
+                      Clk
                     </a>
                   </p>
                 </div>
@@ -159,7 +159,7 @@ export default function ChatApp() {
 
         <Card className="h-[600px] flex flex-col">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle>Chat with DeepSeek R1</CardTitle>
+            <CardTitle>Chat with AI Doctor</CardTitle>
             <div className="flex gap-2">
               {!showSettings && (
                 <Button variant="outline" size="sm" onClick={() => setShowSettings(true)}>
@@ -177,8 +177,8 @@ export default function ChatApp() {
               {messages.length === 0 ? (
                 <div className="flex items-center justify-center h-full text-gray-500">
                   <div className="text-center">
-                    <p className="text-lg mb-2">Welcome to OpenRouter Chat!</p>
-                    <p>Enter your API key above and start chatting with DeepSeek R1</p>
+                    <p className="text-lg mb-2">Welcome to AI Doctor Chat!</p>
+                    <p>Enter your API key above and start chatting with AI Doctor</p>
                   </div>
                 </div>
               ) : (
