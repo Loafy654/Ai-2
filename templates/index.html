@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Doctor Assistant - Your Personal Health Checker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1><i class="fas fa-user-md"></i> AI Doctor Assistant</h1>
+            <p>Your personal AI doctor for health guidance and medical consultation</p>
+            <div class="disclaimer">
+                <i class="fas fa-exclamation-triangle"></i>
+                <small>This AI assistant provides general health information only. Always consult healthcare professionals for medical advice.</small>
+            </div>
+        </header>
+
+        <div class="settings-panel" id="settingsPanel">
+            <div class="settings-header">
+                <h3><i class="fas fa-cog"></i> Configuration</h3>
+                <button class="toggle-btn" id="toggleSettings">
+                    <i class="fas fa-chevron-up"></i>
+                </button>
+            </div>
+            <div class="settings-content" id="settingsContent">
+                <div class="input-group">
+                    <label for="apiKey">
+                        <i class="fas fa-key"></i> AI Service API Key
+                    </label>
+                    <div class="password-input">
+                        <input type="password" id="apiKey" placeholder="Enter your AI service API key">
+                        <button type="button" class="toggle-password" id="togglePassword">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                    <small>Get your API key from <a href="https://openrouter.ai" target="_blank">openrouter.ai</a> to power your AI doctor</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-container">
+            <div class="chat-header">
+                <h3><i class="fas fa-stethoscope"></i> Health Consultation</h3>
+                <button class="clear-btn" id="clearChat">
+                    <i class="fas fa-trash"></i> New Session
+                </button>
+            </div>
+            
+            <div class="chat-messages" id="chatMessages">
+                <div class="welcome-message">
+                    <div class="welcome-content">
+                        <i class="fas fa-heartbeat welcome-icon"></i>
+                        <h3>Welcome to Your AI Doctor!</h3>
+                        <p>I'm your personal AI doctor here to help with health questions, symptom analysis, and medical guidance.</p>
+                        <div class="health-features">
+                            <div class="feature">
+                                <i class="fas fa-search-plus"></i>
+                                <span>Symptom Analysis</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-pills"></i>
+                                <span>Medication Info</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-heart"></i>
+                                <span>Wellness Tips</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-phone-alt"></i>
+                                <span>When to See a Doctor</span>
+                            </div>
+                        </div>
+                        <p class="start-prompt">Enter your API key above and start consulting with your AI doctor</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="chat-input-container">
+                <form id="chatForm" class="chat-form">
+                    <div class="input-wrapper">
+                        <input type="text" id="messageInput" placeholder="Describe your symptoms or ask a health question..." disabled>
+                        <button type="submit" id="sendBtn" disabled>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="emergency-notice">
+            <div class="emergency-content">
+                <i class="fas fa-exclamation-circle"></i>
+                <strong>Emergency Notice:</strong> If you're experiencing a medical emergency, call emergency services immediately (911 in the US). This AI assistant is not for emergency situations.
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
